@@ -14,13 +14,13 @@ namespace PollyStudies.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            await Task.Delay(100);
-            _request++;
-
-            if (_request % 4 == 0)
-            {
-                return Ok(15);
-            }
+            await Task.Delay(10);
+            // _request++;
+            //
+            // if (_request % 4 == 0)
+            // {
+            //     return Ok(15);
+            // }
 
             return StatusCode((int) HttpStatusCode.InternalServerError, "something went wrong");
         }
